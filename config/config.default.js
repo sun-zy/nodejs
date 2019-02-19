@@ -9,10 +9,10 @@ module.exports = appInfo => {
 	config.security = {
 		csrf: {
 			enable: false,
-			//			queryName: '_csrf', // 通过 query 传递 CSRF token 的默认字段为 _csrf
-			//			bodyName: '_csrf', // 通过 body 传递 CSRF token 的默认字段为 _csrf
-			//			ignoreJSON: true,//已废弃 默认为 false，当设置为 true 时，将会放过所有 content-type 为 `application/json` 的请求
-			//    useSession: true
+			//queryName: '_csrf', // 通过 query 传递 CSRF token 的默认字段为 _csrf
+			//bodyName: '_csrf', // 通过 body 传递 CSRF token 的默认字段为 _csrf
+			//ignoreJSON: true,//已废弃 默认为 false，当设置为 true 时，将会放过所有 content-type 为 `application/json` 的请求
+			//useSession: true
 		},
 		domainWhiteList: ['http://127.0.0.1:7001'],
 	};
@@ -38,7 +38,7 @@ module.exports = appInfo => {
 	};
 	//允许请求的类型
 	config.cors = {
-		//		origin: '*',
+		//origin: '*',
 		allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
 	};
 	// 连接mysql数据库
