@@ -1,6 +1,6 @@
-# webMonitorSystem
+# nodejs demo
 
-webMonitorSystem
+nodejs
 
 ## QuickStart
 
@@ -31,3 +31,7 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+
+注意：
+1.其中关于数据库以及redis信息，大家可以根据实际情况自行添加；
+2.密码加解密，可以前后端任意生成一对公钥私钥即可。
