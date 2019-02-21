@@ -59,17 +59,12 @@
 　　config.default.js配置如下：
 
 　　　　config.mysql = {
-　　　　　　client: {
-　　　　　　　　// host
-　　　　　　　　host: '',
-　　　　　　　　// 端口号
-　　　　　　　　port: '',
-　　　　　　　　// 用户名
-　　　　　　　　user: '',
-　　　　　　　　// 密码
-　　　　　　　　password: '',
-　　　　　　　　// 数据库名
-　　　　　　　　database: ''
+　　　　　　client: {　　　　　　　　
+　　　　　　　　host: '',// host　　　　　　　　
+　　　　　　　　port: '',// 端口号　　　　　　　　
+　　　　　　　　user: '',// 用户名　　
+　　　　　　　　password: '',// 密码　　　　　　　　
+　　　　　　　　database: ''// 数据库名
 　　　　　　},
 　　　　　　// 是否加载到 app 上，默认开启
 　　　　　　app: true,
@@ -82,7 +77,6 @@
 　　（2）数据库的增删改查语法，官网都有实例，可以参考，这里对更新数据库简单说一下：
 
 　　　　let row = {
-
 　　　　　　password（修改的字段）: newPassword（要修改的值）
 　　　　},
 　　　　options = {
@@ -92,8 +86,6 @@
 　　　　};
 　　　　await this.app.mysql.update('数据库名', row, options);
 
- 
-
        注意：mysql服务器没有开启，或者配置有误，都会造成项目运行时报错，对应修改就可以了~~~　　
 
 3.redis使用：
@@ -101,7 +93,6 @@
 　　写接口时，一定会遇到数据存储的问题，这个时候我们通常采用redis存储数据，而非cookie或者storage（一般用于客户端存储）。
 
 　　（1）redis安装：npm i egg-redis --save，然后在plugin.js里面配置如下：       
-
 　　　　exports.redis= {
 　　　　　　enable: true,
 　　　　　　package: 'egg-redis',
